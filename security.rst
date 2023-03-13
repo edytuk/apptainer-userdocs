@@ -1,12 +1,12 @@
 .. _security:
 
-###########################
- Security in {Project}
-###########################
+#########################
+Security in {Project}
+#########################
 
-*****************
- Security Policy
-*****************
+***************
+Security Policy
+***************
 
 If you suspect you have found a vulnerability in {Project}, we want
 to work with you so that it can be investigated, fixed, and disclosed in
@@ -19,11 +19,11 @@ We disclose vulnerabilities found in {Project} through public
 CVE reports, as well as notifications on our community channels. We
 encourage all users to monitor new releases of {Project} for
 security information. Security patches are applied to the latest
-open-source release.
+release.
 
-************
- Background
-************
+**********
+Background
+**********
 
 {Project} grew out of the need to implement a container platform
 that was suitable for use on shared systems, such as HPC clusters. In
@@ -47,9 +47,9 @@ normal process running under the user's account. Standard file
 permissions and other security controls based on user accounts, groups,
 and processes apply. 
 
-**************************
- Setuid & User Namespaces
-**************************
+************************
+Setuid & User Namespaces
+************************
 
 Using a setuid binary to run container setup operations used to be
 essential to support containers on the older Linux distributions that were
@@ -133,9 +133,9 @@ However, there are also some disadvantages of the non-suid mode:
    of the admin guide for details about mitigating the impact of user
    namespace vulnerabilities through disabling network namespaces.
 
-********************************
- Runtime & User Privilege Model
-********************************
+******************************
+Runtime & User Privilege Model
+******************************
 
 While other runtimes have aimed to tackle security concerns by
 sandboxing containers executing as the ``root`` user so that they cannot
@@ -166,9 +166,9 @@ If you do require the additional isolation of the network, devices,
 PIDs, etc., which other runtimes provide, {Project} can make use of
 additional namespaces and functionality such as seccomp and cgroups.
 
-********************************
- Singularity Image Format (SIF)
-********************************
+******************************
+Singularity Image Format (SIF)
+******************************
 
 {Project} uses SIF as its default container format. A SIF container
 is a single file, which makes it easy to manage and distribute. Inside
@@ -209,12 +209,12 @@ encryption and decryption are performed using the Linux kernel's LUKS2
 feature. This is the same technology routinely used for full disk
 encryption. The encrypted container is mounted directly through the
 kernel. Unlike other container formats, the encrypted container is run
-without ever decrypted its contents to disk.
+without ever decrypting its contents to disk.
 Encryption and decryption is not currently supported in non-suid mode.
 
-*********************************
- Configuration & Runtime Options
-*********************************
+*******************************
+Configuration & Runtime Options
+*******************************
 
 System administrators who manage {Project} can use configuration
 files to set security restrictions, grant or revoke a user's

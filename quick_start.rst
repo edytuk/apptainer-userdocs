@@ -1,8 +1,8 @@
 .. _quick-start:
 
-#############
- Quick Start
-#############
+###########
+Quick Start
+###########
 
 .. _sec:quickstart:
 
@@ -18,9 +18,9 @@ https://apptainer.org/help
 
 .. _quick-installation:
 
-********************
- Quick Installation
-********************
+******************
+Quick Installation
+******************
 
 You will need a Linux system to run {Project} natively and it's easiest
 to install if you have root access.
@@ -36,9 +36,9 @@ and using {Project} on Mac and Windows machines
 are discussed in the `installation section of the admin guide
 <{admindocs}/installation.html>`__.
 
-*****************************************
- Overview of the {Project} Interface
-*****************************************
+***************************************
+Overview of the {Project} Interface
+***************************************
 
 {Project}'s :ref:`command line interface <cli>` allows you to build
 and interact with containers transparently. You can run programs inside
@@ -162,7 +162,8 @@ To pass the ``--containall`` option to the ``run`` command and run a
 
 {Project} has the concept of command groups. For
 instance, to list Linux capabilities for a particular user, you would
-use the ``list`` command in the ``capability`` command group, like so:
+use the ``list`` command in the ``capability`` command group, as
+follows:
 
 .. code::
 
@@ -178,9 +179,9 @@ particular container, you can view them as follows:
 
    $ {command} inspect --helpfile --app=foo foo.sif  # See the help for foo, if provided
 
-********************
- Downloading images
-********************
+******************
+Downloading images
+******************
 
 You can use the `pull
 <cli/{command}_pull.html>`_
@@ -217,9 +218,9 @@ definition file with Dockerfile, please see: :ref:`this section
 
 .. _cowimage:
 
-**********************
- Interact with images
-**********************
+***********************
+Interacting with images
+***********************
 
 You can interact with images in several ways, each of which can accept
 image URIs in addition to a local image path.
@@ -371,10 +372,10 @@ to run ``echo`` command in this shell as follows:
 
    hello
 
-Because {Project} runscripts are evaluated shell scripts arguments can
-behave slightly differently than in Docker/OCI runtimes, if they contain
-expressions that have special meaning to the shell. Here is an illustrative
-example:
+Because {Project} runscripts are evaluated shell scripts, arguments
+can behave slightly differently than in Docker/OCI runtimes, if they
+contain expressions that have special meaning to the shell. Here is an
+illustrative example:
 
 .. code::
 
@@ -401,9 +402,9 @@ behavior, as it calls the specified executable directly:
    $ {command} exec docker://alpine echo "\\\$HOSTNAME"
    \$HOSTNAME
 
-********************
- Working with Files
-********************
+******************
+Working with Files
+******************
 
 Files on the host are reachable from within the container:
 
@@ -448,9 +449,9 @@ do with normal Linux commands:
 
 .. _build-images-from-scratch:
 
-*****************************
- Building images from scratch
-*****************************
+****************************
+Building images from scratch
+****************************
 
 .. _sec:buildimagesfromscratch:
 
@@ -514,7 +515,7 @@ to exercise care.
 ==============================
 
 For a reproducible, verifiable and production-quality container, it is
-recommended that you build you SIF file using {aProject} definition file.
+recommended that you build a SIF file using {aProject} definition file.
 This also makes it easy to add files, environment variables, and install custom
 software. You can start with base images from Docker Hub and use
 images directly from official repositories such as Ubuntu, Debian,
@@ -581,9 +582,9 @@ If you need additional help or support, see https://apptainer.org/help.
 
 .. _installation-request:
 
-***********************************
- {Project} on a shared resource
-***********************************
+*********************************
+{Project} on a shared resource
+*********************************
 
 Perhaps you are a user who wants a few talking points and background to
 share with your administrator. Or maybe you are an administrator who
